@@ -1,19 +1,36 @@
 import React from "react"
-import './UserListItem.css'
+// import './UserListItem.css'
 import PropTypes from 'prop-types'
 
 const UserListItem = ({ image, name, email, birthday }) => {
     // console.log(props);
     return (
-        <div className="profile">
-            <img src={image} alt="images" />
-            <p>Name: {name = "fali ime"}</p>
-            <p>Email: {email}</p>
-            <p>Date of birth: {birthday}</p>
-
-        </div>
+        <ul className="collection">
+            <li className="collection-item avatar">
+                <img src={image} alt={image} className="circle" />
+                <span className="title">Name: {name}</span>
+                <p> Email: {email} <br />
+                    Date of birth: {birthday}
+                </p>
+            </li>
+        </ul>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 UserListItem.propTypes = {
     image: PropTypes.string,

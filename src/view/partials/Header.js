@@ -4,7 +4,15 @@ import "./Header.css"
 
 const Header = () => {
     return (
-        <h1>React Users</h1>
+
+        <header>
+            <nav>
+                <div className="nav-wrapper">
+                    <a className="brand-logo center">BIT people</a>
+                </div>
+            </nav>
+        </header>
+
     )
 }
 
