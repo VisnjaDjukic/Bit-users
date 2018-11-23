@@ -29,7 +29,7 @@ const fetchUserData = () => {
             const listOfUser = people.results;
 
             const myUser = listOfUser.map((user) => {
-                return new User(user.name.first, user.picture, user.email, user.dob.date);
+                return new User(user.name.first, user.picture, user.email, user.dob.date, user.gender);
             });
 
             return myUser;

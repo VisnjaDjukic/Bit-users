@@ -2,6 +2,8 @@ import React from "react"
 import './UserCard.css'
 const UserCard = (props) => {
 
+    const genderFemale = (props.sex === "female") ? "card-content female" : "card-content"
+
     return (
         <div className="col s12 m4">
             <div className="card">
@@ -9,7 +11,7 @@ const UserCard = (props) => {
                     <img src={props.image} alt={props.image} />
                     <span className="card-title">{props.name}</span>
                 </div>
-                <div className="card-content">
+                <div className={genderFemale}>
                     <p>Email:{props.email} </p>
                     <p>Date of birth: {props.birthday}</p>
                 </div>

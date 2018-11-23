@@ -9,12 +9,12 @@ const UserList = (props) => {
     const userList = props.list.map((user, i) => {
         console.log(user)
         const date = new Date(user.birthday).toLocaleDateString("en-GB").split("/").join(".");
-        return <UserListItem key={i} name={user.name} image={user.image.thumbnail} email={user.hideEmail()} birthday={date + "."} />
+        return <UserListItem key={i} name={user.name} image={user.image.thumbnail} email={user.hideEmail()} birthday={date + "."} sex={user.gender} />
     })
 
     const userCard = props.list.map((user, i) => {
         const date = new Date(user.birthday).toLocaleDateString("en-GB").split("/").join(".");
-        return <UserCard key={i} name={user.name.charAt(0).toUpperCase() + user.name.slice(1)} image={user.image.large} email={user.hideEmail()} birthday={date + "."} />
+        return <UserCard key={i} name={user.name.charAt(0).toUpperCase() + user.name.slice(1)} image={user.image.large} email={user.hideEmail()} birthday={date + "."} sex={user.gender} />
     })
 
     return (

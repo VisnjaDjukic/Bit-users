@@ -19,6 +19,7 @@ class App extends React.Component {
     this.state = {
       isGrid: this.isGridInUse(),
       myUser: [],
+
     }
   }
 

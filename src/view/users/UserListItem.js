@@ -2,11 +2,11 @@ import React from "react"
 // import './UserListItem.css'
 import PropTypes from 'prop-types'
 
-const UserListItem = ({ image, name, email, birthday }) => {
-    // console.log(props);
+const UserListItem = ({ image, name, email, birthday, sex }) => {
+    const genderFemale = (sex === "female") ? "collection-item avatar female" : "collection-item avatar"
     return (
         <ul className="collection">
-            <li className="collection-item avatar">
+            <li className={genderFemale}>
                 <img src={image} alt={image} className="circle" />
                 <span className="title">Name: {name}</span>
                 <p> <i className="tiny material-icons">email</i> Email: {email} </p>

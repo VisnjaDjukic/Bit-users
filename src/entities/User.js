@@ -1,12 +1,13 @@
 
 class User {
 
-    constructor(name, picture, email, date) {
+    constructor(name, picture, email, date, gender) {
 
         this.name = name;
         this.image = picture;
         this.email = email;
         this.birthday = date;
+        this.gender = gender;
 
     }
     hideEmail = () => {
